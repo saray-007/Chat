@@ -42,6 +42,9 @@ function actualizarMensaje() {
 
         listMsgs.appendChild(newLi);
     }
+    if (listMsgs.lastElementChild) {
+        listMsgs.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
 }
 
 document.getElementById("sendButton").addEventListener('click', enviarMensaje);
